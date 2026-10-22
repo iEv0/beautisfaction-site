@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;padding:0;background:#E4DFD0;}
+body{-webkit-font-smoothing:antialiased;font-family:'DM Sans',sans-serif;color:#1E1C2E;}
+a{color:#360202;text-decoration:underline;text-underline-offset:3px;}
+a:hover{color:#1E1C2E;}
+*{box-sizing:border-box;}
+@keyframes bf-pulse{0%{box-shadow:0 0 0 0 rgba(201,168,106,.65),0 8px 24px rgba(30,28,46,.25);}70%{box-shadow:0 0 0 12px rgba(201,168,106,0),0 8px 24px rgba(30,28,46,.25);}100%{box-shadow:0 0 0 0 rgba(201,168,106,0),0 8px 24px rgba(30,28,46,.25);}}
+@keyframes bf-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.bf-scroll::-webkit-scrollbar{display:none;}
+</style>
+</helmet>
+<div style="max-width:430px;margin:0 auto;background:#F2EEE2;min-height:100vh;position:relative;box-shadow:0 0 0 1px rgba(155,161,186,.35);">
+
+<section data-screen-label="01 Hero" style="position:relative;overflow:hidden;padding:16px 16px 40px;background:#1E1C2E;color:#F2EEE2;">
+  <img src="./assets/library-bg.jpeg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;pointer-events:none;">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,28,46,.9) 0%,rgba(30,28,46,.82) 45%,rgba(30,28,46,.95) 91%,#1E1C2E 100%);pointer-events:none;"></div>
+  <div style="position:relative;">
+  <div style="display:flex;justify-content:center;"><div style="position:relative;width:78px;aspect-ratio:805/285;overflow:hidden;flex:none;"><img src="./assets/logo-lockup-cream.png" alt="BEAUTY MBA" style="position:absolute;left:-12.4%;top:-124.6%;width:124.2%;height:auto;display:block;"></div></div>
+  <div style="margin-top:14px;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#F2EEE2;">Онлайн-інтенсив для власниць салонів</div>
+  <h1 style="font-family:'Prata',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.03em;margin:16px 0 0;text-align:center;white-space:nowrap;">BEAUTISFACTION <span style="color:#C9A86A;">4.0</span></h1>
+  <div style="margin-top:20px;border:1px solid #C9A86A;padding:14px 18px;"><p style="font-family:'Prata',serif;font-size:16px;line-height:1.35;margin:0;text-align:center;text-wrap:balance;">Маркетинг та&nbsp;сервіс для залучення нових клієнтів в&nbsp;салон на&nbsp;Чорну п'ятницю, Різдво та&nbsp;Новий рік</p></div>
+  <p style="font-size:12px;line-height:1.5;margin:14px auto 0;text-align:center;color:#C9CCDA;">за 2 дні збери власну унікальну пропозицію<br>та систему роботи, після якої нові клієнтки стають постійними</p>
+  <div style="position:relative;height:340px;margin:16px -16px 0;">
+    <div style="position:absolute;inset:0;overflow:hidden;">
+      <div style="position:absolute;left:50%;top:-10px;width:420px;height:420px;margin-left:-210px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(201,168,106,.85) 0%,rgba(186,150,86,.6) 22%,rgba(150,115,60,.32) 45%,rgba(120,90,45,.1) 65%,rgba(120,90,45,0) 74%);"></div>
+      <img src="./assets/valeria-cutout.png" alt="Валерія Пономарьова" style="position:absolute;left:50%;top:0;width:340px;margin-left:-180px;height:auto;display:block;">
+    </div>
+    </div>
+  <div style="margin-top:-40px;position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;text-shadow:0 1px 3px rgba(30,28,46,.95),0 0 12px rgba(30,28,46,.9);"><div style="font-size:12px;line-height:1.4;white-space:nowrap;">Валерія Пономарьова<br><span style="color:#C9CCDA;">власниця MANICÚLT</span></div>
+    <div style="font-size:12px;line-height:1.4;text-align:right;white-space:nowrap;">12 років у б'юті<br><span style="color:#C9CCDA;">5 років керує дистанційно</span></div>
+  </div>
+  <a href="#join" style="margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:#F2EEE2;color:#360202;text-decoration:none;padding:8px 8px 8px 28px;height:72px;" style-hover="background:#EAE6D8;color:#360202;">
+    <span style="font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;min-width:0;">Хочу на інтенсив</span>
+    <span style="flex:none;width:56px;align-self:stretch;background:#360202;color:#F2EEE2;display:flex;align-items:center;justify-content:center;font-size:22px;">→</span>
+  </a>
+  <div style="margin-top:32px;text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#C9CCDA;">Понад 166 учасниць вже пройшли інтенсив, серед яких:</div>
+  <div style="margin:12px -16px 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);"><div style="display:flex;width:max-content;animation:bf-marquee 26s linear infinite;"><div style="display:flex;gap:12px;padding:8px 6px 8px 0;flex:none;"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-elect.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-want.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-wo.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-vona.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-glitz.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-nailon.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-gbar.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-fleur.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-poruch.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div></div><div style="display:flex;gap:12px;padding:8px 6px 8px 0;flex:none;"><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-elect.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-want.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-wo.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-vona.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-glitz.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-nailon.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-gbar.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-fleur.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div><div style="width:52px;height:52px;border-radius:50%;overflow:hidden;background:#F2EEE2;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);flex:none;"><img src="./assets/logo-poruch.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;"></div></div></div></div><div style="margin-top:14px;display:flex;justify-content:center;"><div style="display:flex;align-items:center;gap:0;background:#9BA1BA;border-radius:30px;padding:4px 20px 4px 4px;box-shadow:0 0 0 1px rgba(176,138,62,.7),0 0 0 3px #1E1C2E,0 0 0 4px rgba(176,138,62,.35);"><div style="width:44px;height:44px;border-radius:50%;background:#F2EEE2;color:#1E1C2E;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:22px;flex:none;">?</div><span style="font-size:14px;color:#1E1C2E;font-weight:500;padding-left:14px;white-space:nowrap;">тут можеш бути ти ♥</span></div></div>
+  </div>
+</section>
+
+
+<div style="background:#1E1C2E;padding:22px 16px;display:flex;align-items:center;justify-content:center;gap:12px;"><div style="flex:1;height:1px;background:rgba(176,138,62,.45);max-width:90px;"></div><div style="width:8px;height:8px;background:#B08A3E;transform:rotate(45deg);flex:none;"></div><div style="flex:1;height:1px;background:rgba(176,138,62,.45);max-width:90px;"></div></div>
+
+<section data-screen-label="02 Болі" style="background-image:linear-gradient(180deg,#1E1C2E 0%,rgba(30,28,46,.9) 6%,rgba(30,28,46,.9) 94%,#1E1C2E 100%),url('./assets/bg-lecture-red.jpeg');background-size:cover;background-position:center 55%;background-color:#1E1C2E;color:#F2EEE2;padding:24px 16px 56px;position:relative;overflow:clip;">
+  <img src="./assets/crest-cream.png" alt="" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:118%;height:auto;opacity:.06;pointer-events:none;">
+  <div style="position:relative;">
+  <h2 data-counter="1" style="font-family:'Prata',serif;font-weight:400;font-size:26px;line-height:1.3;letter-spacing:-.01em;margin:0 0 28px;">Ми дослідили <span style="color:#C9A86A;display:inline-block;min-width:2.2ch;">{{ count }}</span> салонів і&nbsp;<span style="border-bottom:1px solid rgba(201,168,106,.7);padding-bottom:2px;">ось що вимотує власниць</span></h2>
+  <div style="display:grid;margin:0 -16px;">
+<div data-folder="1" style="position:relative;z-index:1;margin-top:0;will-change:transform,opacity;">
+      <div style="height:34px;width:64%;background:#F2EEE2;border-radius:0 30px 0 0;margin-right:auto;"></div>
+      <div style="background:#F2EEE2;padding:12px 20px 34px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;">
+        <div style="width:38px;height:38px;background:#360202;transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-left:2px;"><span style="transform:rotate(-45deg);font-family:'Prata',serif;font-size:16px;color:#F2EEE2;">1</span></div>
+        <p style="margin:0;font-size:14px;line-height:1.45;color:rgba(30,28,46,.82);">Таргет крутиться нон стоп, а клієнтів однаково не вистачає, і між записами стає більше вікон</p>
+      </div>
+    </div>
+<div data-folder="2" style="position:relative;z-index:2;margin-top:-26px;will-change:transform,opacity;">
+      <div style="height:34px;width:64%;background:#360202;border-radius:30px 0 0 0;margin-left:auto;"></div>
+      <div style="background:#360202;padding:12px 20px 34px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;">
+        <div style="width:38px;height:38px;background:#9BA1BA;transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-left:2px;"><span style="transform:rotate(-45deg);font-family:'Prata',serif;font-size:16px;color:#1E1C2E;">2</span></div>
+        <p style="margin:0;font-size:14px;line-height:1.45;color:rgba(242,238,226,.88);">Нові клієнти приходять один раз і зникають, а постійні тепер приходять раз на два місяці</p>
+      </div>
+    </div>
+<div data-folder="3" style="position:relative;z-index:3;margin-top:-26px;will-change:transform,opacity;">
+      <div style="height:34px;width:64%;background:#EAE6D8;border-radius:0 30px 0 0;margin-right:auto;"></div>
+      <div style="background:#EAE6D8;padding:12px 20px 34px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;">
+        <div style="width:38px;height:38px;background:#360202;transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-left:2px;"><span style="transform:rotate(-45deg);font-family:'Prata',serif;font-size:16px;color:#F2EEE2;">3</span></div>
+        <p style="margin:0;font-size:14px;line-height:1.45;color:rgba(30,28,46,.82);">Робиш акцію за акцією і навіть не знаєш, чи хоч одна з них окупилась</p>
+      </div>
+    </div>
+<div data-folder="4" style="position:relative;z-index:4;margin-top:-26px;will-change:transform,opacity;">
+      <div style="height:34px;width:64%;background:#360202;border-radius:30px 0 0 0;margin-left:auto;"></div>
+      <div style="background:#360202;padding:12px 20px 34px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;">
+        <div style="width:38px;height:38px;background:#9BA1BA;transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-left:2px;"><span style="transform:rotate(-45deg);font-family:'Prata',serif;font-size:16px;color:#1E1C2E;">4</span></div>
+        <p style="margin:0;font-size:14px;line-height:1.45;color:rgba(242,238,226,.88);">Майстринь знайти нереально, а ті, що є, то переїжджають, то вигорають, то йдуть працювати на себе</p>
+      </div>
+    </div>
+<div data-folder="5" style="position:relative;z-index:5;margin-top:-26px;will-change:transform,opacity;">
+      <div style="height:34px;width:64%;background:#F2EEE2;border-radius:0 30px 0 0;margin-right:auto;"></div>
+      <div style="background:#F2EEE2;padding:12px 20px 34px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;">
+        <div style="width:38px;height:38px;background:#360202;transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-left:2px;"><span style="transform:rotate(-45deg);font-family:'Prata',serif;font-size:16px;color:#F2EEE2;">5</span></div>
+        <p style="margin:0;font-size:14px;line-height:1.45;color:rgba(30,28,46,.82);">Наче і оборот є, і майстрині працюють, а в кінці місяця думаєш: а де гроші?</p>
+      </div>
+    </div>
+<div data-folder="6" style="position:relative;z-index:6;margin-top:-26px;will-change:transform,opacity;">
+      <div style="height:34px;width:64%;background:#360202;border-radius:30px 0 0 0;margin-left:auto;"></div>
+      <div style="background:#360202;padding:12px 20px 34px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;border-radius:0 0 26px 26px;">
+        <div style="width:38px;height:38px;background:#9BA1BA;transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-left:2px;"><span style="transform:rotate(-45deg);font-family:'Prata',serif;font-size:16px;color:#1E1C2E;">6</span></div>
+        <p style="margin:0;font-size:14px;line-height:1.45;color:rgba(242,238,226,.88);">Січень та лютий кожен рік просто виживаєш</p>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:15px;line-height:1.6;margin:32px 0 0;text-wrap:pretty;">Чорна п'ятниця та Новий рік можуть привести тобі нових клієнтів. Але якщо після першого візиту з ними ніхто не працює, у січні ти знову шукатимеш клієнтів з нуля, а святкові знижки просто з'їдять прибуток.</p>
+  </div>
+</section>
+
+<section style="background:#1E1C2E;padding:0 16px 40px;">
+  <a href="#join" style="display:block;border-radius:44px;background:linear-gradient(180deg,#C08F35 0%,#9E6E22 100%);color:#F7F2E4;text-decoration:none;text-align:center;font-size:17px;font-weight:500;padding:22px 18px;box-shadow:0 0 0 2px rgba(176,138,62,.55),0 8px 22px rgba(16,15,26,.45);" style-hover="filter:brightness(1.07);color:#F7F2E4;">Приєднайся до інтенсиву</a>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 108px;gap:8px;align-items:center;margin-top:22px;">
+    <div style="background:#E9E4D4;color:#1E1C2E;padding:22px 18px;text-align:center;clip-path:polygon(0 12px,12px 0,calc(100% - 12px) 0,100% 12px,100% calc(100% - 12px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 12px));font-size:13px;line-height:1.5;text-wrap:pretty;">щоб цього разу святкові знижки не з’їли прибуток і клієнти повертались після першого візиту</div>
+    <div style="position:relative;width:108px;height:108px;border-radius:50%;background:#F2EEE2;border:2px solid #B08A3E;box-shadow:0 0 0 4px #1E1C2E,0 0 0 5px rgba(176,138,62,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-6deg);">
+      <div style="position:absolute;inset:8px;border:1px dashed rgba(176,138,62,.7);border-radius:50%;"></div>
+      <div style="font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#9BA1BA;white-space:nowrap;">інтенсив</div>
+      <div style="font-family:'Prata',serif;font-size:30px;line-height:1;color:#360202;margin-top:3px;">4.0</div>
+      <div style="font-size:7.5px;letter-spacing:.08em;text-transform:uppercase;color:#B08A3E;margin-top:4px;white-space:nowrap;">Beauty MBA</div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="03 Програма" style="background-image:linear-gradient(rgba(242,238,226,0.93),rgba(242,238,226,0.93)),url('./assets/bg-arches.jpeg');background-size:cover;background-position:center 30%;background-color:rgb(242,238,226);padding:44px 16px 48px;">
+  <h2 style="font-family:'Prata',serif;font-weight:400;font-size:34px;line-height:.98;letter-spacing:-.025em;margin:0 0 24px;text-transform:uppercase;">Програма <span style="color:#360202;">інтенсиву</span></h2>
+  <div style="display:flex;flex-direction:column;">
+    <div style="flex:none;position:relative;z-index:2;background:linear-gradient(180deg,#2C2A40 0%,#1E1C2E 34%,#171623 100%);color:#F2EEE2;border-radius:20px 20px 3px 3px;overflow:hidden;box-shadow:0 -5px 14px rgba(20,19,30,.28);">
+      <button onClick="{{ toggle1 }}" style="width:100%;background:none;border:0;color:inherit;font-family:'DM Sans',sans-serif;text-align:left;padding:26px 18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;">
+        <span style="display:block;"><span style="display:block;font-family:'Prata',serif;font-size:21px;line-height:1.15;text-transform:uppercase;">Як залучити нових клієнтів на свята та втримати їх</span><span style="display:block;font-size:11px;letter-spacing:.06em;color:#9BA1BA;margin-top:7px;">/ День I</span></span>
+        <span style="flex:none;width:34px;height:34px;border:1px solid rgba(242,238,226,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;">{{ sign1 }}</span>
+      </button>
+      <sc-if value="{{ open1 }}" hint-placeholder-val="{{ true }}">
+        <div style="padding:0 18px 24px;display:flex;flex-direction:column;gap:16px;">
+          <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#C9A86A;">Сервіс</div><p style="margin:6px 0 0;font-size:14px;line-height:1.6;">Поки сервіс не налаштований, реклама приводить тих, хто прийде один раз. Пройдемо всі точки контакту з салоном, від першого повідомлення до виходу за двері, і ти побачиш, де губляться твої клієнти.</p></div>
+          <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#C9A86A;">Маркетинг на свята</div><p style="margin:6px 0 0;font-size:14px;line-height:1.6;">Як влаштований маркетинг у MANICÚLT, календар акцій від Хелловіну до 14 лютого та чому знижка рідко окупається. Прямо на ефірі збереш свою пропозицію, а я дам готові тексти сторіс та розсилки.</p></div>
+          <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#C9A86A;">Робота з базою</div><p style="margin:6px 0 0;font-size:14px;line-height:1.6;">Акція окупається не на першому візиті, а на другому та наступних. Покажу, що роблять мої адміністраторки після першого візиту клієнтки, щоб вона повернулась, та як я мотивую їх це робити.</p></div>
+        </div>
+      </sc-if>
+    </div>
+    <div style="flex:none;position:relative;z-index:1;margin-top:-12px;background:linear-gradient(180deg,#4C0505 0%,#360202 34%,#2A0202 100%);color:#F2EEE2;border-radius:20px 20px 3px 3px;overflow:hidden;box-shadow:0 -5px 14px rgba(20,19,30,.28);">
+      <button onClick="{{ toggle2 }}" style="width:100%;background:none;border:0;color:inherit;font-family:'DM Sans',sans-serif;text-align:left;padding:26px 18px 22px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;">
+        <span style="display:block;"><span style="display:block;font-family:'Prata',serif;font-size:21px;line-height:1.15;text-transform:uppercase;">Екскурсія в MANICÚLT: команда та фінанси</span><span style="display:block;font-size:11px;letter-spacing:.06em;color:#C2A8A8;margin-top:7px;">/ День II</span></span>
+        <span style="flex:none;width:34px;height:34px;border:1px solid rgba(242,238,226,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1;">{{ sign2 }}</span>
+      </button>
+      <sc-if value="{{ open2 }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:0 18px 24px;display:flex;flex-direction:column;gap:16px;">
+          <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#C9A86A;">Команда</div><p style="margin:6px 0 0;font-size:14px;line-height:1.6;">Що думає майстриня, перш ніж прийти до тебе, та чому вона йде через день зі словами «дякую, па-па». Покажу бренд роботодавця, умови для майстринь та розподіл ролей у моїй команді.</p></div>
+          <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#C9A86A;">Фінанси</div><p style="margin:6px 0 0;font-size:14px;line-height:1.6;">Як я керую салоном дистанційно вже 5 років: головні таблиці, на основі яких приймаю всі рішення — P&amp;L, кешфлоу та фінплан по майстринях.</p></div>
+          <div><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#C9A86A;">Самодіагностика</div><p style="margin:6px 0 0;font-size:14px;line-height:1.6;">Оціниш свій салон за 5 питаннями та побачиш, де найбільша прогалина: у клієнтах, команді чи грошах.</p></div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+  <div style="margin-top:32px;"><a href="#join" style="display:block;border-radius:44px;background:linear-gradient(180deg,#C08F35 0%,#9E6E22 100%);color:#F7F2E4;text-decoration:none;text-align:center;font-size:17px;font-weight:500;padding:22px 18px;box-shadow:0 0 0 2px rgba(176,138,62,.55),0 8px 22px rgba(16,15,26,.25);" style-hover="filter:brightness(1.07);color:#F7F2E4;">Приєднайся до інтенсиву</a></div>
+</section>
+
+
+
+<section data-screen-label="04 Результат" style="background:#F2EEE2;position:relative;">
+  <div style="position:sticky;top:0;z-index:1;padding:48px 16px 64px;background-image:linear-gradient(180deg,rgba(76,5,5,.93),rgba(54,2,2,.95)),url('./assets/bg-salon.jpeg');background-size:cover;background-position:center 50%;background-color:#360202;color:#F2EEE2;border-radius:28px 28px 0 0;">
+    <h2 style="font-family:'Prata',serif;font-weight:400;font-size:32px;line-height:1.05;letter-spacing:-.02em;margin:0;text-transform:uppercase;">В результаті <span style="color:#C9A86A;">інтенсиву</span></h2>
+    <div style="margin-top:20px;border-top:1px solid rgba(242,238,226,.5);">
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(242,238,226,.3);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#360202;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">I</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Збереш свою пропозицію на Чорну п'ятницю або Новий рік</span></div>
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(242,238,226,.3);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#360202;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">II</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Отримаєш шаблони сторіс та розсилки по базі, щоб запустити пропозицію одразу</span></div>
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(242,238,226,.3);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#360202;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">III</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Пройдеш шлях клієнтки у своєму салоні та знайдеш, де вона губиться</span></div>
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(242,238,226,.3);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#360202;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">IV</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Оціниш свій салон за 5 питаннями та побачиш, що виправляти першим</span></div>
+    </div>
+  </div>
+  <div style="position:relative;z-index:2;margin-top:-24px;background-image:linear-gradient(180deg,rgba(30,28,46,.9) 0%,rgba(30,28,46,.9) 92%,#1E1C2E 100%),url('./assets/bg-campus-sunset.jpeg');background-size:cover;background-position:center 40%;background-color:#1E1C2E;color:#F2EEE2;border-radius:28px 28px 0 0;padding:44px 16px 44px;box-shadow:0 -10px 28px rgba(30,28,46,.28);">
+    <h2 style="font-family:'Prata',serif;font-weight:400;font-size:28px;line-height:1.08;letter-spacing:-.02em;margin:0;text-transform:uppercase;">Залишиться після <span style="color:#C9A86A;">інтенсиву</span></h2>
+    <div style="margin-top:20px;border-top:1px solid rgba(155,161,186,.6);">
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(155,161,186,.4);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#1E1C2E;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">V</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Маркетингова стратегія салону без залучення маркетолога</span></div>
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(155,161,186,.4);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#1E1C2E;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">VI</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Шлях клієнтки від першого повідомлення до повторного запису</span></div>
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(155,161,186,.4);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#1E1C2E;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">VII</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Робота з базою, щоб після свят клієнти не зникали</span></div>
+      <div style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(155,161,186,.4);"><span style="width:56px;height:56px;border-radius:50%;background:#F2EEE2;color:#1E1C2E;display:flex;align-items:center;justify-content:center;font-family:'Prata',serif;font-size:17px;">VIII</span><span style="font-size:15px;font-weight:500;line-height:1.4;">Картина салону, яким можна керувати дистанційно: команда, ролі, фінанси</span></div>
+    </div>
+    <div style="margin-top:36px;"><a href="#join" style="display:block;border-radius:44px;background:linear-gradient(180deg,#C08F35 0%,#9E6E22 100%);color:#F7F2E4;text-decoration:none;text-align:center;font-size:17px;font-weight:500;padding:22px 18px;box-shadow:0 0 0 2px rgba(176,138,62,.55),0 8px 22px rgba(16,15,26,.45);" style-hover="filter:brightness(1.07);color:#F7F2E4;">Приєднайся до інтенсиву</a></div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 108px;gap:8px;align-items:center;margin-top:22px;">
+    <div style="background:#E9E4D4;color:#1E1C2E;padding:22px 18px;text-align:center;clip-path:polygon(0 12px,12px 0,calc(100% - 12px) 0,100% 12px,100% calc(100% - 12px),calc(100% - 12px) 100%,12px 100%,0 calc(100% - 12px));font-size:13px;line-height:1.5;text-wrap:pretty;"><b>Це не теорія з курсів, а досвід,</b> завдяки якому мій салон у Києві робить більше 1 млн грн обороту на місяць у 67&nbsp;м², а я керую ним з іншої країни 30 хвилин на день.</div>
+    <div style="position:relative;width:108px;height:108px;border-radius:50%;background:#F2EEE2;border:2px solid #B08A3E;box-shadow:0 0 0 4px #1E1C2E,0 0 0 5px rgba(176,138,62,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-6deg);">
+      <div style="position:absolute;inset:8px;border:1px dashed rgba(176,138,62,.7);border-radius:50%;"></div>
+      <div style="font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#9BA1BA;white-space:nowrap;">інтенсив</div>
+      <div style="font-family:'Prata',serif;font-size:30px;line-height:1;color:#360202;margin-top:3px;">4.0</div>
+      <div style="font-size:7.5px;letter-spacing:.08em;text-transform:uppercase;color:#B08A3E;margin-top:4px;white-space:nowrap;">Beauty MBA</div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section data-screen-label="05 Авторка" style="background-image:linear-gradient(rgba(228,223,207,.92),rgba(228,223,207,.92)),url('./assets/bg-salon.jpeg');background-size:cover;background-position:center 45%;background-color:#E4DFCF;padding:44px 16px 48px;">
+  <h2 style="font-family:'Prata',serif;font-weight:400;font-size:32px;line-height:.98;letter-spacing:-.025em;margin:0 0 24px;text-transform:uppercase;">Хто проводить <span style="color:#360202;">інтенсив</span></h2>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:start;">
+    <div>
+      <div style="background:#F2EEE2;border:1px solid #9BA1BA;border-radius:3px;padding:7px 7px 10px;box-shadow:0 1px 6px rgba(22,21,20,.16);"><img src="./assets/lera-chair.jpg" alt="Валерія Пономарьова" style="display:block;width:100%;height:176px;object-fit:cover;object-position:50% 18%;"></div>
+      <div style="text-align:center;font-family:'Prata',serif;font-size:15px;margin-top:12px;">Валерія<br>Пономарьова</div>
+      <div style="text-align:center;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#6a6f88;margin-top:7px;">Власниця MANICÚLT</div>
+    </div>
+    <div style="border-left:1px solid #9BA1BA;padding-left:14px;display:grid;gap:12px;">
+      <p style="margin:0;font-size:12.5px;line-height:1.5;">12 років у б'юті</p>
+      <p style="margin:0;font-size:12.5px;line-height:1.5;">Шлях від кабінету 10&nbsp;м² до студії з командою 20 людей за 2 роки</p>
+      <p style="margin:0;font-size:12.5px;line-height:1.5;">Побудувала салони в Україні та ПАР з командами різного менталітету</p>
+      <p style="margin:0;font-size:12.5px;line-height:1.5;">Київський салон виріс під час війни та керується дистанційно <span style="color:#360202;font-weight:600;">30 хвилин на день</span> вже 5 років</p>
+      <p style="margin:0;font-size:12.5px;line-height:1.5;">MANICÚLT Кейптаун: оборот <span style="color:#360202;font-weight:600;">$55k+</span> з нуля за перші місяці</p>
+      <p style="margin:0;font-size:12.5px;line-height:1.5;">Учениці ростуть у доході в <span style="color:#360202;font-weight:600;">2–4 рази</span> за 3 місяці</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="05b ChatGPT" style="background-image:linear-gradient(180deg,#1E1C2E 0%,rgba(30,28,46,.9) 6%,rgba(30,28,46,.9) 94%,#1E1C2E 100%),url('./assets/bg-lecture-green.jpeg');background-size:cover;background-position:center 60%;background-color:#1E1C2E;color:#F2EEE2;padding:56px 16px 52px;position:relative;overflow:hidden;">
+  <img src="./assets/crest-cream.png" alt="" style="position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:120%;height:auto;opacity:.05;pointer-events:none;">
+  <div style="position:relative;">
+    <div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#9BA1BA;text-align:center;">Чому не ШІ</div>
+    <h2 style="font-family:'Prata',serif;font-weight:400;font-size:27px;line-height:1.18;letter-spacing:-.01em;margin:14px 0 0;text-align:center;text-wrap:balance;">ChatGPT напише тобі 30 акцій на Чорну п'ятницю. А що далі?</h2>
+    
+    <div style="margin-top:24px;background:#F2EEE2;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 30px rgba(10,9,20,.35);">
+      <div style="align-self:flex-end;max-width:84%;background:#360202;color:#F2EEE2;border-radius:14px 14px 3px 14px;padding:10px 14px;font-size:13px;line-height:1.45;">Напиши 30 акцій на Чорну п'ятницю</div>
+      <div style="align-self:flex-start;max-width:96%;display:flex;gap:8px;align-items:flex-end;"><div style="flex:none;width:36px;height:36px;border-radius:50%;overflow:hidden;border:1px solid #C9A86A;background:#6f98b3;"><img src="./assets/robot.jpeg" alt="" style="display:block;width:170%;max-width:none;margin:-14% 0 0 -32%;"></div><div style="background:#EAE6D8;color:#1E1C2E;border-radius:14px 14px 14px 3px;padding:12px 14px;font-size:13px;line-height:1.5;">1. −20% на всі послуги<br>2. Манікюр + педикюр у подарунок<br>3. Сертифікат другу<br><span style="color:#9BA1BA;">… 30. Знижка іменинницям ✓</span></div></div>
+      <div style="align-self:flex-end;max-width:84%;background:#360202;color:#F2EEE2;border-radius:14px 14px 3px 14px;padding:10px 14px;font-size:13px;line-height:1.45;">А скільки мені коштує один клієнт?</div>
+      <div style="align-self:flex-start;display:flex;gap:8px;align-items:flex-end;"><div style="flex:none;width:36px;height:36px;border-radius:50%;overflow:hidden;border:1px solid #C9A86A;background:#6f98b3;"><img src="./assets/robot.jpeg" alt="" style="display:block;width:170%;max-width:none;margin:-14% 0 0 -32%;"></div><div style="background:#EAE6D8;border-radius:14px 14px 14px 3px;padding:12px 16px;display:flex;gap:5px;align-items:center;"><span style="width:6px;height:6px;border-radius:50%;background:#9BA1BA;"></span><span style="width:6px;height:6px;border-radius:50%;background:#9BA1BA;opacity:.7;"></span><span style="width:6px;height:6px;border-radius:50%;background:#9BA1BA;opacity:.4;"></span></div></div>
+    </div>
+    <div style="margin-top:20px;background:#360202;border-radius:4px;padding:22px 20px;">
+      <p style="margin:0;font-size:15px;line-height:1.55;font-weight:600;text-wrap:pretty;">ШІ не знає, скільки тобі коштує один клієнт, чи подзвонить твоя адміністраторка тим, хто прийшов на акцію, та що робити, коли акція привела тих, хто прийшов би і так.</p>
+    </div>
+    <p style="font-size:15px;line-height:1.6;margin:24px 0 0;color:#F2EEE2;text-align:center;border:1px solid #C9A86A;padding:20px 18px;background:rgba(30,28,46,.45);text-wrap:pretty;">Тому на інтенсиві я не дам ще один список акцій. Я покажу, як думати про акцію власниці: скільки клієнтів тобі потрібно, кого саме ти хочеш привести та що буде з ними після першого візиту.</p>
+  </div>
+</section>
+
+<section data-screen-label="06 Для кого" style="background-image:linear-gradient(rgba(242,238,226,0.91),rgba(242,238,226,0.91)),url('./assets/bg-girl-books.jpeg');background-size:cover;background-position:center 60%;background-color:rgb(242,238,226);padding:56px 16px 56px;">
+  <h2 style="font-family:'Prata',serif;font-weight:400;font-size:30px;line-height:1.08;letter-spacing:-.02em;margin:0;text-align:center;text-wrap:balance;">BEAUTISFACTION ідеально тобі підійде, якщо ти:</h2>
+  <div style="margin-top:36px;display:flex;flex-direction:column;gap:12px;">
+    <sc-for list="{{ fits }}" as="f" hint-placeholder-count="5">
+      <div style="position:{{ stackPos }};top:{{ f.top }};min-height:240px;background:#EAE6D8;border:1px solid #9BA1BA;border-radius:4px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;box-shadow:0 -8px 24px rgba(30,28,46,.06);">
+        <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:18px;font-weight:500;color:#9BA1BA;">({{ f.n }})</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#360202;">{{ f.tag }}</span></div>
+        <div style="font-family:'Prata',serif;font-size:22px;line-height:1.3;">{{ f.text }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="margin-top:32px;background-image:linear-gradient(rgba(30,28,46,.88),rgba(30,28,46,.9)),url('./assets/bg-girl-laptop.jpeg');background-size:cover;background-position:center 40%;background-color:#1E1C2E;color:#F2EEE2;border-radius:4px;padding:32px;">
+    <div style="font-family:'Prata',serif;font-size:22px;">Не для тебе, якщо:</div>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:18px;">
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;font-size:14px;line-height:1.55;"><span style="color:#9BA1BA;">×</span><span>Шукаєш мотивацію та натхнення: тут конкретика, цифри та робота прямо на ефірі</span></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;font-size:14px;line-height:1.55;"><span style="color:#9BA1BA;">×</span><span>Хочеш просто список акцій на свята: його тобі за хвилину напише ChatGPT</span></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px;font-size:14px;line-height:1.55;"><span style="color:#9BA1BA;">×</span><span>Не готова чесно подивитись на свій салон та побачити, де саме ти втрачаєш клієнток і гроші</span></div>
+    </div>
+  </div>
+</section>
+
+<div style="background:#1E1C2E;border-top:1px solid rgba(155,161,186,.4);border-bottom:1px solid rgba(155,161,186,.4);padding:12px 0;overflow:hidden;"><div style="display:flex;width:max-content;animation:bf-marquee 32s linear infinite;"><span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9BA1BA;white-space:nowrap;padding-right:16px;">Маркетинг&nbsp;·&nbsp;Сервіс&nbsp;·&nbsp;Команда&nbsp;·&nbsp;Фінанси&nbsp;·&nbsp;Клієнтська&nbsp;база&nbsp;·&nbsp;Маркетинг&nbsp;·&nbsp;Сервіс&nbsp;·&nbsp;Команда&nbsp;·&nbsp;Фінанси&nbsp;·&nbsp;Клієнтська&nbsp;база&nbsp;·&nbsp;</span><span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9BA1BA;white-space:nowrap;padding-right:16px;">Маркетинг&nbsp;·&nbsp;Сервіс&nbsp;·&nbsp;Команда&nbsp;·&nbsp;Фінанси&nbsp;·&nbsp;Клієнтська&nbsp;база&nbsp;·&nbsp;Маркетинг&nbsp;·&nbsp;Сервіс&nbsp;·&nbsp;Команда&nbsp;·&nbsp;Фінанси&nbsp;·&nbsp;Клієнтська&nbsp;база&nbsp;·&nbsp;</span></div></div>
+
+<section data-screen-label="07 Бонуси" style="background-image:linear-gradient(180deg,#1E1C2E 0%,rgba(30,28,46,.9) 6%,rgba(30,28,46,.9) 90%,#1E1C2E 100%),url('./assets/bg-window.jpeg');background-size:cover;background-position:center 30%;background-color:#1E1C2E;padding:48px 16px 8px;">
+  <div style="background:#F2EEE2;border:1px solid #C9A86A;border-radius:4px;padding:18px;display:grid;grid-template-columns:112px minmax(0,1fr);gap:16px;align-items:center;box-shadow:0 0 0 4px #1E1C2E,0 0 0 5px rgba(201,168,106,.35);">
+    <div style="background:#F7F4EA;border:1px solid #9BA1BA;border-radius:3px;padding:5px;transform:rotate(-3deg);box-shadow:0 3px 10px rgba(22,21,20,.2);"><div style="aspect-ratio:1/1;overflow:hidden;border-radius:2px;"><img src="./assets/wheel.png" alt="Колесо балансу" style="display:block;width:130%;height:auto;max-width:none;margin-left:-6%;margin-top:-4%;"></div></div>
+    <div>
+      <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#360202;">Подарунок для всіх учасниць</div>
+      <div style="font-family:'Prata',serif;font-size:19px;line-height:1.2;margin-top:8px;color:#1E1C2E;">Тест «Колесо балансу власниці салону»</div>
+      <p style="font-size:12.5px;line-height:1.5;margin:8px 0 0;color:#1E1C2E;">Оціниш сервіс, маркетинг, базу, команду та фінанси ще до ефіру.</p>
+    </div>
+  </div>
+  <div style="margin-top:12px;background:#360202;color:#F2EEE2;border-radius:4px;padding:28px 22px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;"><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;">Інтерактив на ефірі</span><span style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:1px solid rgba(242,238,226,.6);padding:7px 10px;white-space:nowrap;">Тільки наживо</span></div>
+    <p style="font-family:'Prata',serif;font-size:22px;line-height:1.25;margin:16px 0 0;">Для учасниць, які будуть до кінця, — два подарунки</p>
+    <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px;">
+      <div style="border:1px solid rgba(242,238,226,.35);padding:18px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Prata',serif;font-size:18px;">Скрипти прозвонів бази клієнтів</span><span style="font-size:14px;line-height:1.55;">Які дзвінки робити, на який день після візиту та що казати клієнтці, щоб вона перезаписалась.</span></div>
+      <div style="border:1px solid rgba(242,238,226,.35);padding:18px;display:flex;flex-direction:column;gap:6px;"><span style="font-family:'Prata',serif;font-size:18px;">Повернення без знижки</span><span style="font-size:14px;line-height:1.55;">Як ми повертаємо тих, хто зник, та не віддаємо гроші з власної кишені.</span></div>
+    </div>
+  </div>
+</section>
+<div style="background:#1E1C2E;padding:22px 16px 28px;display:flex;align-items:center;justify-content:center;gap:12px;"><div style="flex:1;height:1px;background:rgba(176,138,62,.45);max-width:90px;"></div><div style="width:8px;height:8px;background:#B08A3E;transform:rotate(45deg);flex:none;"></div><div style="flex:1;height:1px;background:rgba(176,138,62,.45);max-width:90px;"></div></div>
+
+<section id="join" data-screen-label="09 Участь" style="background-image:linear-gradient(rgba(242,238,226,0.94),rgba(242,238,226,0.94)),url('./assets/bg-amphi.jpeg');background-size:cover;background-position:center 35%;background-color:rgb(242,238,226);padding:44px 16px 48px;">
+  <h2 style="font-family:'Prata',serif;font-weight:400;font-size:34px;line-height:.95;letter-spacing:-.025em;margin:0 0 26px;text-transform:uppercase;">Поринь у <span style="color:#360202;">BEAUTISFACTION 4.0</span></h2>
+  <div style="display:grid;grid-template-columns:34px minmax(0,1fr) 34px;grid-template-rows:34px auto 34px;">
+    <div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:173.5px 161.2px;background-position:left top;"></div><div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:164.45% 161.2px;background-position:50% top;"></div><div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:173.5px 161.2px;background-position:right top;"></div>
+    <div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:173.5px 172.9%;background-position:left 50%;"></div>
+    <div style="background:#EAE6D8;padding:18px 16px;">
+
+    <div style="display:grid;gap:12px;margin-bottom:26px;">
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Доступ до 2 днів інтенсиву в Zoom</p></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Маркетинг на Чорну п'ятницю, Різдво та Новий рік: збереш свою пропозицію прямо на ефірі</p></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Готові шаблони сторіс та розсилок по базі</p></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Сервіс, робота з базою, команда та фінанси — з прикладу MANICÚLT</p></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Закритий чат учасниць</p></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Записи на 1 місяць</p></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Тест «Колесо балансу власниці салону»</p></div>
+      <div style="display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;align-items:center;"><span style="color:#360202;font-size:14px;line-height:1;text-align:center;">✓</span><p style="margin:0;font-size:14px;line-height:1.5;">Скрипти прозвонів та повернення клієнток без знижок — для тих, хто з нами до кінця ефіру</p></div>
+    </div>
+    
+<a href="#" style="display:block;background:#360202;color:#F2EEE2;text-decoration:none;text-align:center;font-size:14px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;padding:19px;border-radius:4px;" style-hover="background:#1E1C2E;color:#F2EEE2;">Приєднатись →</a>
+    </div>
+    <div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:173.5px 172.9%;background-position:right 50%;"></div>
+    <div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:173.5px 161.2px;background-position:left bottom;"></div><div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:164.45% 161.2px;background-position:50% bottom;"></div><div style="background:url('./assets/frame-gold-crop.png') no-repeat;background-size:173.5px 161.2px;background-position:right bottom;"></div>
+  </div>
+  
+</section>
+
+<section data-screen-label="08 Відгуки" style="background-image:linear-gradient(rgba(228,223,207,0.92),rgba(228,223,207,0.92)),url('./assets/bg-nyc-library.jpeg');background-size:cover;background-position:center 45%;background-color:rgb(228,223,207);padding:44px 0 46px;">
+  <h2 style="font-family:'Prata',serif;font-weight:400;font-size:30px;line-height:1;letter-spacing:-.025em;margin:0;padding:0 16px;text-transform:uppercase;">Що кажуть ті, хто вже був на BEAUTISFACTION</h2>
+  <div class="bf-scroll" style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px 16px 6px;scrollbar-width:none;align-items:flex-start;">
+    <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="4">
+      <div style="flex:none;width:300px;scroll-snap-align:start;background:#F7F4EA;border:1px solid rgba(155,161,186,.5);border-radius:4px;padding:9px;box-shadow:0 4px 14px rgba(22,21,20,.12);"><img src="{{ r.src }}" alt="Відгук" loading="lazy" style="display:block;width:100%;height:auto;max-height:420px;object-fit:contain;background:#EAE6D8;"></div>
+    </sc-for>
+    <div style="flex:none;width:4px;"></div>
+  </div>
+</section>
+
+<section data-screen-label="10 Питання" style="background-image:linear-gradient(rgba(242,238,226,0.94),rgba(242,238,226,0.94)),url('./assets/bg-lecture-art.jpeg');background-size:cover;background-position:center 30%;background-color:rgb(242,238,226);padding:48px 16px 56px;">
+  <h2 style="font-family:'Prata',serif;font-weight:400;font-size:30px;line-height:1.05;letter-spacing:-.02em;margin:0 0 28px;text-transform:uppercase;">Відповіді на поширені запитання</h2>
+  <div style="border-top:1px solid #1E1C2E;">
+    <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="4">
+      <div style="border-bottom:1px solid #9BA1BA;">
+        <button onClick="{{ q.toggle }}" style="width:100%;background:none;border:none;cursor:pointer;padding:20px 0;display:grid;grid-template-columns:minmax(0,1fr) 40px;gap:16px;align-items:center;text-align:left;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;line-height:1.4;color:#1E1C2E;"><span>{{ q.q }}</span><span style="width:40px;height:40px;border-radius:50%;background:{{ q.btnBg }};color:{{ q.btnFg }};border:1px solid #360202;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1;">{{ q.sign }}</span></button>
+        <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}"><p style="font-size:14px;line-height:1.6;margin:0;padding:0 56px 20px 0;">{{ q.a }}</p></sc-if>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section data-screen-label="11 Фінал" style="position:relative;overflow:hidden;background:#1E1C2E;">
+  <img src="./assets/bg-dome.jpeg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:grayscale(.5) brightness(.6);">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,28,46,.55) 0%,rgba(30,28,46,.42) 40%,rgba(30,28,46,.8) 100%);"></div>
+  <div style="position:relative;padding:34px 16px 30px;">
+    <div style="position:relative;background:linear-gradient(180deg,#C9A87C 0%,#BD9A6C 100%);border-radius:5px;padding:96px 14px 104px;box-shadow:0 10px 34px rgba(16,15,26,.4);overflow:hidden;">
+      <div style="position:absolute;left:0;right:0;top:0;height:172px;background:linear-gradient(180deg,#D3B489 0%,#C4A276 100%);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:5px 5px 0 0;"></div>
+      <div style="position:relative;z-index:2;background:#F7F4EA;color:#1E1C2E;padding:34px 22px 30px;text-align:center;box-shadow:0 3px 16px rgba(16,15,26,.22);">
+        <div style="position:absolute;left:0;right:0;top:-7px;height:8px;background:radial-gradient(circle at 8px 8px,#F7F4EA 7.2px,transparent 7.6px) repeat-x;background-size:16px 16px;"></div>
+        <h2 style="font-family:'Prata',serif;font-weight:400;font-size:28px;line-height:1.06;letter-spacing:-.01em;margin:0;text-transform:uppercase;">Ти можеш пропустити цей інтенсив</h2>
+        <p style="font-size:14px;line-height:1.55;margin:18px 0 0;">Але Чорна п'ятниця та Новий рік однаково настануть. А в січні, коли запис просяде, виграє та власниця, яка вже знає, як повернути клієнток зі свят.</p>
+        <p style="font-size:14px;line-height:1.55;margin:12px 0 0;">Можна дійти до цього методом спроб та помилок — а можна за 2 дні побачити систему, яку я будувала 12 років.</p>
+        <a href="#join" style="display:block;margin-top:24px;border:1px solid #1E1C2E;border-radius:2px;color:#1E1C2E;text-decoration:none;font-family:'Prata',serif;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:16px;" style-hover="background:#1E1C2E;color:#F7F4EA;">Приєднатись</a>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,#C6A276 0%,#B8956A 100%);clip-path:polygon(0 100%,0 26%,50% 0,100% 26%,100% 100%);border-radius:0 0 5px 5px;z-index:1;"></div>
+      <img src="./assets/wax-seal-nologo.png" alt="" style="position:absolute;left:16px;bottom:10px;width:78px;height:78px;object-fit:contain;z-index:4;transform:rotate(-6deg);">
+    </div>
+  </div>
+</section>
+
+<footer style="background:#1E1C2E;color:#9BA1BA;padding:26px 16px 36px;">
+  <div style="font-family:'Prata',serif;font-size:15px;letter-spacing:.1em;color:#F2EEE2;text-transform:uppercase;">BEAUTY MBA · BEAUTISFACTION 4.0</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;">
+    <a href="https://t.me/+2wB8GPyYH6JhMTJi" target="_blank" style="color:#9BA1BA;text-decoration:none;" style-hover="color:#F2EEE2;">Telegram</a>
+    <a href="https://www.instagram.com/valeria.vulakh/" target="_blank" style="color:#9BA1BA;text-decoration:none;" style-hover="color:#F2EEE2;">Instagram</a>
+    <a href="https://docs.google.com/document/d/1wwd2imhoLRCEoE7s7H5dZQS_jwqx_HP_NdiccDPbURI/edit?usp=sharing" target="_blank" style="color:#9BA1BA;text-decoration:none;" style-hover="color:#F2EEE2;">Політика конфіденційності</a>
+    <a href="https://docs.google.com/document/d/1akmkH76QPV1oV2q8fft9r3eNwJqDPt1HiRpdWw8ELXY/edit?usp=sharing" target="_blank" style="color:#9BA1BA;text-decoration:none;" style-hover="color:#F2EEE2;">Публічна оферта</a>
+  </div>
+  <div style="height:1px;background:rgba(155,161,186,.3);margin:22px 0 20px;"></div>
+  <div style="font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(155,161,186,.7);margin-bottom:14px;">Реквізити</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div><div style="font-size:12px;line-height:1.5;color:#F2EEE2;">ФОП Пономарьова Валерія Юріївна</div><div style="font-size:11px;line-height:1.5;margin-top:4px;">ІПН: 3251216881</div></div>
+    <div><div style="font-size:12px;line-height:1.5;color:#F2EEE2;">ФОП Іванова Алла Анатоліївна</div><div style="font-size:11px;line-height:1.5;margin-top:4px;">ІПН: 2416700220</div></div>
+  </div>
+</footer>
+
+<sc-if value="{{ stickyCta }}" hint-placeholder-val="{{ false }}">
+  <div style="position:sticky;bottom:0;z-index:5;padding:8px 12px 12px;">
+    <a href="#join" style="display:flex;align-items:center;justify-content:space-between;gap:12px;background:#360202;color:#F2EEE2;text-decoration:none;padding:6px 6px 6px 20px;height:56px;border:1.5px solid #C9A86A;animation:bf-pulse 2s ease-out infinite;">
+      <span style="font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;min-width:0;">Приєднатись до інтенсиву</span>
+      <span style="flex:none;width:44px;align-self:stretch;background:#F2EEE2;color:#360202;display:flex;align-items:center;justify-content:center;font-size:18px;">→</span>
+    </a>
+  </div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:430},&quot;surveyCount&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:597,&quot;min&quot;:1,&quot;max&quot;:5000,&quot;tsType&quot;:&quot;number&quot;},&quot;stickyCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;stackCards&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+const FITS = [
+  ['Власниця', 'Ти власниця салону або студії та хочеш, щоб клієнти, які прийдуть на свята, залишились з тобою надовго'],
+  ['Після акцій', 'Ти вже робила акції та знижки, а постійних клієнток після них більше не стало'],
+  ['Команда', 'Ти постійно шукаєш майстринь і адміністраторку та втомилась від того, що вони не затримуються'],
+  ['Операційка', 'Всі процеси на тобі: ти і майстриня, і адміністраторка, і інстаграм ведеш'],
+  ['Старт', 'Ти тільки відкриваєш салон і хочеш одразу все зробити правильно, щоб не прогоріти'],
+];
+const FAQS = [
+  ['Що, якщо я не зможу наживо або вимкнуть світло?', 'Записи будуть доступні місяць. Але сюрприз з ефіру отримають тільки ті, хто був наживо.'],
+  ['Я поки працюю сама або тільки відкриваю салон. Мені підійде?', 'Так. Ти одразу побачиш, як побудувати сервіс, роботу з базою та команду, щоб потім нічого не переробляти.'],
+  ['Мені треба вміти налаштовувати рекламу?', 'Ні. Ти власниця, а не маркетологиня. Я покажу, як поставити задачу команді або підряднику, щоб акція привела саме тих клієнток, які тобі потрібні.'],
+  ['Можна дивитися з телефону?', 'Так, ефір у Zoom. Для конструктора оферу краще мати під рукою блокнот або ноутбук, бо пропозицію ти збиратимеш прямо на ефірі.'],
+];
+const ROMAN = ['01', '02', '03', '04', '05'];
+class Component extends DCLogic {
+  state = { d1: true, d2: false, faq: 0, count: 0 };
+  componentDidMount() {
+    this.onScroll = () => this.check();
+    window.addEventListener('scroll', this.onScroll, { passive: true, capture: true });
+    document.addEventListener('scroll', this.onScroll, { passive: true, capture: true });
+    this.poll = setInterval(() => this.check(), 300);
+    this.folderTick = () => {
+      const fs = document.querySelectorAll('[data-folder]');
+      const vh = window.innerHeight;
+      fs.forEach((el) => {
+        const w = el.parentElement.getBoundingClientRect().top;
+        const top = w + el.offsetTop;
+        const k = Math.max(0, Math.min(1, (vh * 0.98 - top) / (vh * 0.4)));
+        const e = 1 - Math.pow(1 - k, 3);
+        el.style.transform = 'translateY(' + Math.round((1 - e) * 140) + 'px)';
+        el.style.opacity = String(Math.min(1, 0.15 + e));
+      });
+    };
+    window.addEventListener('scroll', this.folderTick, { passive: true, capture: true });
+    document.addEventListener('scroll', this.folderTick, { passive: true, capture: true });
+    this.folderIv = setInterval(this.folderTick, 120);
+    this.folderTick();
+    this.check();
+  }
+  check() {
+    if (this.started) return;
+    const c = document.querySelector('[data-counter]');
+    if (c && c.getBoundingClientRect().top < window.innerHeight * 0.85) this.countUp();
+  }
+  countUp() {
+    this.started = true; clearInterval(this.poll);
+    const T = this.props.surveyCount ?? 597, near = T - 3, t0 = Date.now();
+    this.timer = setInterval(() => {
+      const t = Date.now() - t0;
+      const v = t < 1300 ? near * (1 - Math.pow(1 - t / 1300, 2)) : near + 3 * (1 - Math.pow(1 - Math.min(1, (t - 1300) / 3200), 3));
+      this.setState({ count: Math.min(T, Math.round(v)) });
+      if (t > 4600) { this.setState({ count: T }); clearInterval(this.timer); }
+    }, 40);
+  }
+  componentWillUnmount() { clearInterval(this.folderIv); document.removeEventListener('scroll', this.folderTick, true); window.removeEventListener('scroll', this.folderTick, true); clearInterval(this.timer); clearInterval(this.poll); document.removeEventListener('scroll', this.onScroll, true); window.removeEventListener('scroll', this.onScroll, true); }
+  renderVals() {
+    const { d1, d2, faq, count } = this.state;
+    const stack = this.props.stackCards ?? true;
+    return {
+      count, stickyCta: this.props.stickyCta ?? true, stackPos: stack ? 'sticky' : 'relative',
+      open1: d1, open2: d2, sign1: d1 ? '−' : '+', sign2: d2 ? '−' : '+',
+      toggle1: () => this.setState({ d1: !d1 }), toggle2: () => this.setState({ d2: !d2 }),
+      reviews: Array.from({ length: 13 }, (_, i) => ({ src: './assets/review-' + String(i + 1).padStart(2, '0') + '.png' })),
+      fits: FITS.map(([tag, text], i) => ({ tag, text, n: ROMAN[i], top: (24 + i * 14) + 'px' })),
+      faqs: FAQS.map(([q, a], i) => ({ q, a, open: faq === i, sign: faq === i ? '−' : '+', btnBg: faq === i ? '#360202' : 'transparent', btnFg: faq === i ? '#F2EEE2' : '#360202', toggle: () => this.setState({ faq: faq === i ? -1 : i }) })),
+    };
+  }
+}
+</script>
+</body>
+</html>
