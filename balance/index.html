@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Колесо балансу власниці салону · BEAUTISFACTION</title>
+<meta name="description" content="Оцініть 8 напрямків вашого салону від 1 до 5 і побачте зони для росту.">
+<meta name="theme-color" content="#1E1C2E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1E1C2E; --cream:#F2EEE2; --paper:#F7F4EA; --sand:#E4DFD0;
+  --burgundy:#360202; --gold:#C9A86A; --slate:#9BA1BA; --mist:#C9CCDA;
+  --head:'Prata',Georgia,serif; --body:'DM Sans','Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;background:var(--sand);}
+body{-webkit-font-smoothing:antialiased;font-family:var(--body);color:var(--ink);font-size:15px;line-height:1.55;}
+button{font-family:inherit;}
+.col{max-width:480px;margin:0 auto;background:var(--cream);min-height:100vh;position:relative;box-shadow:0 0 0 1px rgba(155,161,186,.35);overflow:hidden;}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:20px 16px 40px;background:var(--ink);color:var(--cream);}
+.hero > img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;pointer-events:none;}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,28,46,.9) 0%,rgba(30,28,46,.82) 45%,rgba(30,28,46,.95) 91%,#1E1C2E 100%);pointer-events:none;}
+.hero .in{position:relative;}
+.logo{display:flex;justify-content:center;}
+.logo div{position:relative;width:78px;aspect-ratio:805/285;overflow:hidden;flex:none;}
+.logo img{position:absolute;left:-12.4%;top:-124.6%;width:124.2%;height:auto;display:block;}
+.kicker{margin-top:28px;text-align:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--mist);}
+h1{font-family:var(--head);font-weight:400;font-size:34px;line-height:1.02;letter-spacing:-.025em;text-transform:uppercase;text-align:center;margin:14px 0 0;text-wrap:balance;}
+h1 em{font-style:normal;color:var(--gold);}
+.lead{margin-top:22px;border:1px solid var(--gold);padding:14px 18px;}
+.lead p{font-family:var(--head);font-size:16px;line-height:1.4;margin:0;text-align:center;text-wrap:balance;}
+.chips{margin-top:20px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist);}
+.chips span+span::before{content:"";display:inline-block;width:5px;height:5px;background:var(--gold);transform:rotate(45deg);margin-right:18px;vertical-align:middle;position:relative;top:-1px;}
+
+/* FORM */
+.form{padding:36px 16px 40px;background-image:linear-gradient(rgba(242,238,226,.93),rgba(242,238,226,.93)),url('/assets/bg-arches.jpeg');background-size:cover;background-position:center;background-color:var(--cream);}
+.form h2{font-family:var(--head);font-weight:400;font-size:26px;line-height:1.1;letter-spacing:-.02em;text-transform:uppercase;margin:0 0 6px;}
+.form h2 em{font-style:normal;color:var(--burgundy);}
+.form .sub{margin:0 0 22px;font-size:14px;color:#4b4e66;}
+.crit{background:var(--paper);border:1px solid var(--slate);border-radius:4px;padding:20px 18px 16px;margin-top:12px;position:relative;}
+.crit.low{border-color:var(--burgundy);}
+.crit-top{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:14px;align-items:center;}
+.dia{width:34px;height:34px;background:var(--burgundy);transform:rotate(45deg);display:flex;align-items:center;justify-content:center;margin-left:2px;}
+.dia span{transform:rotate(-45deg);font-family:var(--head);font-size:15px;color:var(--cream);}
+.crit:nth-child(even) .dia{background:var(--slate);}
+.crit:nth-child(even) .dia span{color:var(--ink);}
+.crit-name{font-family:var(--head);font-size:19px;line-height:1.15;display:flex;align-items:center;gap:8px;}
+.crit-hint{font-size:12.5px;color:#5B5E76;margin:3px 0 0;line-height:1.4;}
+.score{font-family:var(--head);font-size:32px;line-height:1;color:var(--burgundy);font-variant-numeric:tabular-nums;}
+.warn{display:none;width:18px;height:18px;color:var(--burgundy);flex:none;}
+.crit.low .warn{display:block;}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin:14px 0 0;cursor:pointer;}
+input[type=range]::-webkit-slider-runnable-track{height:4px;background:linear-gradient(to right,var(--burgundy) var(--p),#D5D1C3 var(--p));}
+input[type=range]::-moz-range-track{height:4px;background:#D5D1C3;}
+input[type=range]::-moz-range-progress{height:4px;background:var(--burgundy);}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-9px;background:var(--cream);border:2px solid var(--gold);outline:2px solid var(--burgundy);outline-offset:-4px;border-radius:0;transform:rotate(45deg) scale(.8);}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--cream);border:2px solid var(--gold);border-radius:0;transform:rotate(45deg) scale(.8);}
+input[type=range]:focus-visible{outline:2px solid var(--burgundy);outline-offset:4px;}
+.ticks{display:flex;justify-content:space-between;font-size:11px;color:#5B5E76;padding:0 3px;font-variant-numeric:tabular-nums;}
+.desc{font-size:15px;font-weight:500;line-height:1.4;margin:12px 0 6px;min-height:1.4em;}
+.toggle{background:none;border:0;padding:4px 0;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--burgundy);cursor:pointer;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;}
+.toggle:focus-visible{outline:2px solid var(--burgundy);outline-offset:3px;}
+.scale{list-style:none;margin:10px 0 0;padding:0;border:1px solid var(--slate);background:var(--cream);}
+.scale li{display:grid;grid-template-columns:28px minmax(0,1fr);padding:9px 12px;font-size:13.5px;line-height:1.4;color:#5B5E76;border-top:1px solid rgba(155,161,186,.35);}
+.scale li:first-child{border-top:0;}
+.scale li b{font-family:var(--head);font-weight:400;}
+.scale li.on{background:var(--burgundy);color:var(--cream);font-weight:500;}
+.scale li.on b{color:var(--gold);}
+.cta{margin-top:24px;}
+.btn{display:block;width:100%;background:var(--burgundy);color:var(--cream);border:1px solid var(--gold);border-radius:0;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:20px 24px;cursor:pointer;animation:pulse 2.6s infinite;}
+.btn:hover{background:#4a0707;}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+.btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--cream);animation:none;}
+.btn.ghost:hover{background:rgba(201,168,106,.14);}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(201,168,106,.6);}70%{box-shadow:0 0 0 12px rgba(201,168,106,0);}100%{box-shadow:0 0 0 0 rgba(201,168,106,0);}}
+.hint-save{margin:10px 0 0;font-size:12px;text-align:center;color:#5B5E76;}
+
+/* RESULT */
+.result{background-image:linear-gradient(180deg,#1E1C2E 0%,rgba(30,28,46,.9) 6%,rgba(30,28,46,.9) 94%,#1E1C2E 100%),url('/assets/bg-window.jpeg');background-size:cover;background-position:center 30%;background-color:var(--ink);color:var(--cream);padding:48px 16px 44px;animation:rise .7s ease both;}
+@keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.result .kicker{margin:0;text-align:left;color:var(--gold);}
+.result h2{font-family:var(--head);font-weight:400;font-size:32px;line-height:1.02;letter-spacing:-.02em;text-transform:uppercase;margin:12px 0 0;}
+.result h2 em{font-style:normal;color:var(--gold);}
+.sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:26px 0 8px;}
+.sum div{border:1px solid rgba(201,168,106,.55);padding:14px 10px 12px;text-align:center;}
+.sum b{display:block;font-family:var(--head);font-weight:400;font-size:32px;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums;}
+.sum span{display:block;margin-top:8px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);line-height:1.3;}
+.radar{margin:10px -4px 0;}
+.radar svg{display:block;width:100%;height:auto;}
+.r-ring{fill:none;stroke:var(--slate);stroke-width:1;opacity:.45;}
+.r-axis{stroke:var(--slate);stroke-width:1;opacity:.45;}
+.r-area{fill:var(--gold);fill-opacity:.24;stroke:var(--gold);stroke-width:2.2;stroke-linejoin:round;}
+.r-dot{fill:var(--ink);stroke:var(--gold);stroke-width:2.2;}
+.r-label{fill:var(--cream);font-family:var(--body);font-size:17px;font-weight:500;}
+.r-tick{fill:var(--slate);font-family:var(--body);font-size:12px;}
+.bars{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid rgba(155,161,186,.4);}
+.bars li{display:grid;grid-template-columns:minmax(0,1fr) 84px 22px;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid rgba(155,161,186,.4);font-size:14px;}
+.bar{height:4px;background:rgba(155,161,186,.35);}
+.bar i{display:block;height:100%;background:var(--gold);}
+.bars b{font-family:var(--head);font-weight:400;color:var(--gold);text-align:right;font-variant-numeric:tabular-nums;}
+.zt{display:flex;align-items:center;gap:12px;margin:44px 0 0;}
+.zt svg{width:26px;height:26px;color:var(--gold);flex:none;}
+.zt h2{margin:0;font-size:28px;}
+.znote{margin:10px 0 18px;font-size:13.5px;color:var(--mist);}
+.zone{background:var(--cream);color:var(--ink);border:1px solid var(--gold);border-radius:4px;padding:20px 18px;margin-top:14px;box-shadow:0 0 0 4px #1E1C2E,0 0 0 5px rgba(201,168,106,.35);}
+.zone-top{display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;align-items:center;}
+.zone .dia span{font-size:14px;}
+.zone-name{font-family:var(--head);font-size:19px;line-height:1.15;}
+.zone-pill{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);margin-top:3px;}
+.zone-now{margin:14px 0 8px;font-size:13px;color:#5B5E76;border-top:1px solid rgba(155,161,186,.5);padding-top:12px;}
+.zone-rec{margin:0;font-size:14.5px;line-height:1.55;}
+.strong{margin-top:30px;border:1px solid rgba(201,168,106,.55);padding:14px 16px;font-size:14px;}
+.strong .kicker{display:block;margin:0 0 6px;font-size:10px;text-align:left;}
+.acts{margin-top:32px;display:grid;gap:12px;}
+.acts a{display:block;text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;padding:6px;}
+.acts a:hover{color:var(--gold);}
+.foot{background:var(--ink);color:var(--slate);text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:18px 16px 28px;}
+@media (prefers-reduced-motion:reduce){.btn,.result{animation:none;}}
+</style>
+</head>
+<body>
+<div class="col">
+
+  <section class="hero">
+    <img class="bg" src="/assets/library-bg.jpeg" alt="">
+    <div class="shade"></div>
+    <div class="in">
+      <div class="logo"><div><img src="/assets/logo-lockup-cream.png" alt="BEAUTY MBA"></div></div>
+      <div class="kicker">Подарунок для учасниць</div>
+      <h1>Колесо балансу <em>власниці салону</em></h1>
+      <div class="lead"><p>Оціни 8 напрямків свого салону від 1 до 5 і побачиш, що виправляти першим</p></div>
+      <div class="chips"><span>8 напрямків</span><span>3 хвилини</span></div>
+    </div>
+  </section>
+
+  <section class="form">
+    <h2>Оціни свій салон <em>чесно</em></h2>
+    <p class="sub">Відповідай за фактом, а не за бажанням. Обери рівень, який описує твою ситуацію сьогодні.</p>
+    <form id="form" onsubmit="return false"></form>
+    <div class="cta"><button class="btn" id="save" type="button">Зберегти оцінки</button></div>
+    <p class="hint-save">Відповіді зберігаються лише на твоєму пристрої</p>
+  </section>
+
+  <section class="result" id="result" hidden aria-live="polite"></section>
+
+  <div class="foot">BEAUTISFACTION 4.0</div>
+</div>
+
+<script>
+var CRITERIA = [
+  { id:'traffic', name:'Трафік', short:'Трафік', hint:'Скільки нових клієнток приходить і звідки',
+    scale:['Нових клієнток майже немає','Потік нестабільний, залежить від випадку','Є базовий потік, але потрібне масштабування','Стабільний потік з кількох джерел','Керований потік заявок із прогнозованим результатом'],
+    rec:'Запусти щонайменше два стабільні джерела записів: таргетована реклама, рекомендації клієнток, колаборації. Рахуй вартість одного запису з кожного джерела.' },
+  { id:'content', name:'Контент', short:'Контент', hint:'Соцмережі салону та особистий блог',
+    scale:['Контенту немає або він хаотичний','Контент виходить рідко, без системи','Є контент-план, але виконується частково','Регулярний контент із хорошим відгуком аудиторії','Системний контент, який продає і будує довіру'],
+    rec:'Склади контент-план на місяць і закріпи дві рубрики: одна показує експертність, друга результат клієнток. Публікуй за розкладом, а не за настроєм.' },
+  { id:'sales', name:'Продажі', short:'Продажі', hint:'Від першого повідомлення до запису й повторного візиту',
+    scale:['Продажів немає або вони випадкові','Записи є, але без системи','Є шлях клієнтки до запису, але конверсія низька','Стабільні записи й повторні візити з прогнозованим результатом','Налагоджена система продажів і утримання з високою конверсією'],
+    rec:'Пропиши шлях клієнтки від першого повідомлення до повторного запису. Дай адміністратору скрипти й щотижня міряй конверсію зі звернення в запис.' },
+  { id:'product', name:'Послуги та продукт', short:'Послуги', hint:'Меню послуг, ціни, позиціонування салону',
+    scale:['Меню послуг немає або воно сире','Послуги є, але немає чіткого позиціонування','Послуги працюють, але потребують доопрацювання','Якісні послуги з хорошими відгуками','Флагманська послуга, яку рекомендують'],
+    rec:'Сформулюй, чим твій салон відрізняється від сусідніх, і збери меню навколо однієї флагманської послуги зі зрозумілою ціною та пакетами.' },
+  { id:'team', name:'Команда', short:'Команда', hint:'Майстри й адміністратори: стандарти, відповідальність, плинність',
+    scale:['Команди немає або постійна плинність','Усе тримається на мені','Команда працює, але стандартів немає','Є стандарти й навчання, майстри самостійні','Сильна команда, яка працює без мого контролю'],
+    rec:'Опиши стандарти сервісу, введи адаптацію нових майстрів і короткі щотижневі збори. Це перший крок, щоб вийти з ручного управління.' },
+  { id:'finance', name:'Фінанси та системи', short:'Фінанси', hint:'Облік, цифри, CRM, регламенти',
+    scale:['Не знаю своїх цифр','Облік хаотичний, прибуток не рахую','Облік є, але рішення приймаю інтуїтивно','Щотижня бачу виручку, маржу та завантаження','Керую салоном за цифрами, є CRM і регламенти'],
+    rec:'Почни з трьох цифр щотижня: виручка, маржа, завантаження крісел. Перенеси записи й клієнтську базу в CRM.' },
+  { id:'leader', name:'Лідерство в ніші', short:'Лідерство', hint:'Впізнаваність і експертність у твоєму місті та ніші',
+    scale:['Невідома в ніші','Відома у вузькому колі','Є впізнаваність, але не експертність','Визнана експертка в ніші','Лідерка думок, до якої дослухаються'],
+    rec:'Обери одну тему, в якій ти експертка, і говори про неї регулярно: у соцмережах, на подкастах, у професійних спільнотах.' },
+  { id:'joy', name:'Задоволеність', short:'Задоволеність', hint:'Твоє відчуття від справи, енергія та реалізація',
+    scale:['Повне вигорання, немає сил','Працюю через силу','Нормально, але без натхнення','Подобається те, що роблю','Максимальна реалізація і задоволення'],
+    rec:'Переглянь навантаження: що можна делегувати, а що прибрати зовсім. Поверни собі вихідні й час на стратегію.' }
+];
+var KEY='beautisfaction-balance-wheel-v1';
+var values={};
+CRITERIA.forEach(function(c){values[c.id]=3;});
+try{
+  var saved=JSON.parse(localStorage.getItem(KEY)||'null');
+  if(saved&&typeof saved==='object')CRITERIA.forEach(function(c){var v=+saved[c.id];if(v>=1&&v<=5)values[c.id]=v;});
+}catch(e){}
+
+var WARN='<svg class="warn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.2M12 16.9v.1"/></svg>';
+var form=document.getElementById('form');
+
+CRITERIA.forEach(function(c,idx){
+  var el=document.createElement('div');
+  el.className='crit';
+  el.id='crit-'+c.id;
+  el.innerHTML=
+    '<div class="crit-top"><div class="dia"><span>'+(idx+1)+'</span></div>'+
+    '<div><div class="crit-name">'+c.name+WARN+'</div><p class="crit-hint">'+c.hint+'</p></div>'+
+    '<div class="score" id="score-'+c.id+'"></div></div>'+
+    '<input type="range" id="in-'+c.id+'" min="1" max="5" step="1" aria-label="'+c.name+'">'+
+    '<div class="ticks" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>'+
+    '<p class="desc" id="desc-'+c.id+'"></p>'+
+    '<button type="button" class="toggle" id="tg-'+c.id+'" aria-expanded="false" aria-controls="sc-'+c.id+'">Показати шкалу</button>'+
+    '<ol class="scale" id="sc-'+c.id+'" hidden></ol>';
+  form.appendChild(el);
+  var input=el.querySelector('input');
+  input.value=values[c.id];
+  input.addEventListener('input',function(){values[c.id]=+input.value;paint(c);});
+  var tg=el.querySelector('.toggle'),sc=el.querySelector('.scale');
+  tg.addEventListener('click',function(){
+    var open=sc.hidden;
+    sc.hidden=!open;
+    tg.setAttribute('aria-expanded',String(open));
+    tg.textContent=open?'Сховати шкалу':'Показати шкалу';
+  });
+  paint(c);
+});
+
+function paint(c){
+  var v=values[c.id];
+  var el=document.getElementById('crit-'+c.id);
+  document.getElementById('score-'+c.id).textContent=v;
+  document.getElementById('desc-'+c.id).textContent=c.scale[v-1];
+  document.getElementById('in-'+c.id).style.setProperty('--p',((v-1)/4*100)+'%');
+  el.classList.toggle('low',v<=2);
+  document.getElementById('sc-'+c.id).innerHTML=c.scale.map(function(t,i){
+    return '<li class="'+(i+1===v?'on':'')+'"><b>'+(i+1)+'</b><span>'+t+'</span></li>';
+  }).join('');
+}
+
+function radar(){
+  var W=600,H=540,cx=300,cy=272,R=172,n=CRITERIA.length;
+  function pt(r,i){var a=(-90+i*360/n)*Math.PI/180;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];}
+  function f(x){return x.toFixed(1);}
+  function poly(r){return CRITERIA.map(function(_,i){return pt(r,i).map(f).join(',');}).join(' ');}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Колесо балансу: '+CRITERIA.map(function(c){return c.short+' '+values[c.id];}).join(', ')+'">';
+  for(var k=1;k<=5;k++)s+='<polygon class="r-ring" points="'+poly(R*k/5)+'"/>';
+  CRITERIA.forEach(function(c,i){var p=pt(R,i);s+='<line class="r-axis" x1="'+cx+'" y1="'+cy+'" x2="'+f(p[0])+'" y2="'+f(p[1])+'"/>';});
+  var area=CRITERIA.map(function(c,i){return pt(R*values[c.id]/5,i).map(f).join(',');}).join(' ');
+  s+='<polygon class="r-area" points="'+area+'"/>';
+  CRITERIA.forEach(function(c,i){var p=pt(R*values[c.id]/5,i);s+='<circle class="r-dot" cx="'+f(p[0])+'" cy="'+f(p[1])+'" r="5.5"/>';});
+  for(var t=1;t<=5;t++)s+='<text class="r-tick" x="'+(cx+7)+'" y="'+f(cy-R*t/5-3)+'">'+t+'</text>';
+  CRITERIA.forEach(function(c,i){
+    var p=pt(R+22,i),cos=(p[0]-cx)/(R+22);
+    var anchor=cos>0.3?'start':(cos<-0.3?'end':'middle');
+    var dy=i===0?-6:(i===n/2?18:6);
+    s+='<text class="r-label" x="'+f(p[0])+'" y="'+f(p[1]+dy)+'" text-anchor="'+anchor+'">'+c.short+'</text>';
+  });
+  return s+'</svg>';
+}
+
+function show(){
+  try{localStorage.setItem(KEY,JSON.stringify(values));}catch(e){}
+  var sum=0;CRITERIA.forEach(function(c){sum+=values[c.id];});
+  var avg=(sum/CRITERIA.length).toFixed(1).replace('.',',');
+  var sorted=CRITERIA.slice().sort(function(a,b){return values[a.id]-values[b.id];});
+  var low=sorted.filter(function(c){return values[c.id]<=2;});
+  var zones=low,note;
+  if(zones.length){
+    note='Напрямки з оцінкою 1–2 потребують уваги першими. Починай з верхнього.';
+  }else{
+    zones=sorted.filter(function(c){return values[c.id]<=3;}).slice(0,3);
+    note=zones.length?'Критичних провалів немає. Ось напрямки з найнижчою оцінкою, у них найшвидший приріст.':'';
+  }
+  var strong=CRITERIA.filter(function(c){return values[c.id]>=4;});
+  var html=
+    '<div class="kicker">Результат</div><h2>Твоє <em>колесо</em> балансу</h2>'+
+    '<div class="sum"><div><b>'+avg+'</b><span>Середній бал з 5</span></div>'+
+    '<div><b>'+low.length+'</b><span>Зон потребує уваги</span></div>'+
+    '<div><b>'+strong.length+'</b><span>Сильних сторін</span></div></div>'+
+    '<div class="radar">'+radar()+'</div>'+
+    '<ul class="bars">'+CRITERIA.map(function(c){
+      return '<li><span>'+c.name+'</span><span class="bar"><i style="width:'+values[c.id]*20+'%"></i></span><b>'+values[c.id]+'</b></li>';
+    }).join('')+'</ul>';
+  if(zones.length){
+    html+='<div class="zt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 2.8 19.5h18.4L12 3.5z"/><path d="M12 10v4.2M12 16.9v.1"/></svg><h2>Зони для <em>росту</em></h2></div>'+
+      '<p class="znote">'+note+'</p>'+
+      zones.map(function(c){
+        var v=values[c.id],idx=CRITERIA.indexOf(c)+1;
+        return '<article class="zone"><div class="zone-top"><div class="dia"><span>'+idx+'</span></div><div><div class="zone-name">'+c.name+'</div>'+
+          '<div class="zone-pill">Оцінка '+v+(v<=2?' · потребує уваги':'')+'</div></div></div>'+
+          '<p class="zone-now">Зараз: '+c.scale[v-1]+'</p><p class="zone-rec">'+c.rec+'</p></article>';
+      }).join('');
+  }else{
+    html+='<div class="zt"><h2>Зони для <em>росту</em></h2></div><p class="znote">Усі напрямки на рівні 4–5. Наступний крок: масштабування та закріплення системи.</p>';
+  }
+  if(strong.length)html+='<div class="strong"><span class="kicker">Твої сильні сторони</span>'+strong.map(function(c){return c.name;}).join(', ')+'.</div>';
+  html+='<div class="acts"><button class="btn ghost" id="again" type="button">Пройти ще раз</button><a href="/">Про BEAUTISFACTION 4.0</a></div>';
+  var box=document.getElementById('result');
+  box.innerHTML=html;
+  box.hidden=false;
+  box.style.animation='none';void box.offsetWidth;box.style.animation='';
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  box.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+  document.getElementById('again').addEventListener('click',function(){
+    box.hidden=true;
+    CRITERIA.forEach(function(c){values[c.id]=3;document.getElementById('in-'+c.id).value=3;paint(c);});
+    try{localStorage.removeItem(KEY);}catch(e){}
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+  });
+}
+document.getElementById('save').addEventListener('click',show);
+</script>
+</body>
+</html>

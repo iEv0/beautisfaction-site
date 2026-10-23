@@ -28,6 +28,7 @@ jobs:
               *) [ -f "$f" ] && cp "$f" _site/assets/ ;;
             esac
           done
+          [ -d balance ] && cp -r balance _site/balance
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
